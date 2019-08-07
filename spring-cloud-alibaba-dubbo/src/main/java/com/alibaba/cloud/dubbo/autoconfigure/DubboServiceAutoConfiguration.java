@@ -16,15 +16,11 @@
  */
 package com.alibaba.cloud.dubbo.autoconfigure;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.Primary;
-import org.springframework.core.env.Environment;
-import org.springframework.core.env.PropertyResolver;
 
 import com.alibaba.cloud.dubbo.env.DubboCloudProperties;
 import com.alibaba.cloud.dubbo.service.DubboGenericServiceExecutionContextFactory;
@@ -47,18 +43,6 @@ public class DubboServiceAutoConfiguration {
 	@ConditionalOnMissingBean
 	public DubboGenericServiceFactory dubboGenericServiceFactory() {
 		return new DubboGenericServiceFactory();
-	}
-
-	/**
-	 * Build a primary {@link PropertyResolver} bean to {@link Autowired @Autowired}
-	 *
-	 * @param environment {@link Environment}
-	 * @return alias bean for {@link Environment}
-	 */
-	@Bean
-	@Primary
-	public PropertyResolver primaryPropertyResolver(Environment environment) {
-		return environment;
 	}
 
 	@Configuration
