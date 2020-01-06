@@ -34,8 +34,8 @@ import org.springframework.core.env.PropertySource;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
+import static com.alibaba.spring.util.PropertySourcesUtils.getSubProperties;
 import static org.apache.dubbo.common.constants.CommonConstants.DEFAULT_PROTOCOL;
-import static org.apache.dubbo.config.spring.util.PropertySourcesUtils.getSubProperties;
 
 /**
  * Dubbo {@link WebApplicationType#NONE Non-Web Application}
@@ -88,7 +88,7 @@ public class DubboNonWebApplicationEnvironmentPostProcessor
 		WebApplicationType webApplicationType = application.getWebApplicationType();
 
 		if (!WebApplicationType.NONE.equals(webApplicationType)) { // Just works in
-																	// Non-Web Application
+			// Non-Web Application
 			if (logger.isDebugEnabled()) {
 				logger.debug(
 						"Current application is a Web Application, the process will be ignored.");
@@ -158,8 +158,8 @@ public class DubboNonWebApplicationEnvironmentPostProcessor
 
 		for (String propertyName : properties.stringPropertyNames()) {
 			if (propertyName.endsWith(PROTOCOL_NAME_PROPERTY_NAME_SUFFIX)) { // protocol
-																				// name
-																				// property
+				// name
+				// property
 				String protocol = properties.getProperty(propertyName);
 				if (isRestProtocol(protocol)) {
 					String beanName = resolveBeanName(propertyName);

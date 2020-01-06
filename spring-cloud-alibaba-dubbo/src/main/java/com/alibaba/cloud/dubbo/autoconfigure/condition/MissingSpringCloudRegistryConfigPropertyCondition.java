@@ -29,7 +29,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.util.StringUtils;
 
 import static com.alibaba.cloud.dubbo.registry.SpringCloudRegistryFactory.PROTOCOL;
-import static org.apache.dubbo.config.spring.util.PropertySourcesUtils.getSubProperties;
+import static com.alibaba.spring.util.PropertySourcesUtils.getSubProperties;
 
 /**
  * Missing {@link SpringCloudRegistry} Property {@link Condition}.

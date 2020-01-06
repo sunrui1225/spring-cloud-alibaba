@@ -32,7 +32,7 @@
         <aliyun.java.sdk.dysmsapi>1.1.0</aliyun.java.sdk.dysmsapi>
         <aliyun.sdk.mns>1.1.8.6</aliyun.sdk.mns>
         <aliyun.java.sdk.dyvmsapi>1.1.1</aliyun.java.sdk.dyvmsapi>
-        <spring.context.support.version>1.0.5</spring.context.support.version>
+        <spring.context.support.version>1.0.6-SNAPSHOT</spring.context.support.version>
     </properties>
 
     <dependencyManagement>

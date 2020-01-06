@@ -16,6 +16,10 @@
     <name>Spring Cloud Alibaba Dubbo Examples</name>
     <packaging>pom</packaging>
 
+    <properties>
+        <resteasy.version>3.0.19.Final</resteasy.version>
+    </properties>
+
     <modules>
         <module>spring-cloud-dubbo-sample-api</module>
         <module>spring-cloud-dubbo-server-sample</module>
